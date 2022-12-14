@@ -8,11 +8,12 @@ jobs:
   build:
     runs-on: [ ubuntu-latest ]
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Setup Node
         uses: actions/setup-node@v3
-      with:
-        node-version: 14.x
+        with:
+          node-version: 14.x
       
       - name: Installing Dependencies
         run: npm install
