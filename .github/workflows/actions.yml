@@ -6,18 +6,16 @@ on:
 
 jobs:
   build:
-
     runs-on: [ ubuntu-latest ]
-
     steps:
       - uses: actions/checkout@v2
       - name: Setup Node
-      uses: actions/setup-node@v3
+        uses: actions/setup-node@v3
       with:
         node-version: 14.x
       
       - name: Installing Dependencies
-      run: npm install
+        run: npm install
 
       - name: Testing
-      run: npm test
+        run: npm test
