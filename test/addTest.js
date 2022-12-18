@@ -34,66 +34,63 @@ describe('Add', function(){
     });
 
 
-    it('Positive to char', function(){
+    it('Add char to positive', function(){
         expect(function() { add(1,'c');})
         .to.throw(Error);
     });
-    it('expand previous (add creates string)', function(){
-        expect(add(1,'c')).to.equal("1c");
-    });
-    it('Negative to char', function(){
+    it('Add char to negative', function(){
         expect(function() { add(-1,'c');})
         .to.throw(Error);
     });
-    it('Char to positive', function(){
+    it('Add positive to char', function(){
         expect(function() { add('c',1);})
         .to.throw(Error);
     });
-    it('Char to negative', function(){
+    it('Add negative to char', function(){
         expect(function() { add('c',-1);})
         .to.throw(Error);
     });
-    it('Positive to string', function(){
+    it('Add string to positive', function(){
         expect(function() { add(1,"string");})
         .to.throw(Error);
     });
-    it('Negative to string', function(){
+    it('Add string to negative', function(){
         expect(function() { add(-1,"string");})
         .to.throw(Error);
     });
-    it('String to positive', function(){
+    it('Add positive to string', function(){
         expect(function() { add("string",1);})
         .to.throw(Error);
     });
-    it('String to negative', function(){
+    it('Add negative to string', function(){
         expect(function() { add("string",-1);})
         .to.throw(Error);
     });
-    it('Positive to Boolean', function(){
+    it('Add boolean to positive', function(){
         expect(function() { add(1,true);})
         .to.throw(Error);
     });
-    it('Negative to Boolean', function(){
+    it('Add boolean to negative', function(){
         expect(function() { add(-1,true);})
         .to.throw(Error);
     });
-    it('Boolean to positive', function(){
+    it('Add positive to boolean', function(){
         expect(function() { add(false,1);})
         .to.throw(Error);
     });
-    it('Boolean to negative', function(){
+    it('Add negative to boolean', function(){
         expect(function() { add(false,-1);})
         .to.throw(Error);
     });
-    it('No arguments', function(){
+    it('Add with no parameters', function(){
         let num = add();
         expect(num).to.equal(0);
     });
-    it('One argument', function(){
+    it('One parameter', function(){
         expect(function() { add(1);})
         .to.throw(Error);
     });
-    it('Three arguments', function(){
+    it('Three parameters', function(){
         expect(add(1,2,3)).to.equal(3);
     });
 });
