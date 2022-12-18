@@ -50,4 +50,7 @@ describe('defaultTo', function(){
     it('Default to boolean false true', function(){
         expect(defaultTo(false,true)).to.equal(false);
     });
+    it('Default empty', function(){
+        expect(defaultTo("","default")).to.equal("default");
+    });
 });
