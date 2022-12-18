@@ -20,6 +20,7 @@ jobs:
 
       - name: Testing
         run: npm test
+        continue-on-error: true
 
       - name: Coveralls Report
         uses: coverallsapp/github-action@master
